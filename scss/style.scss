@@ -2,7 +2,7 @@
 
 @Author: Themezinho
 @URL: http://www.themezinho.net
- 
+
 This file contains the styling for the actual theme, this
 is the file you need to edit to change the look of the
 theme.
@@ -52,14 +52,14 @@ $color-green:#33a16e;
 
 
 @mixin transition{-webkit-transition: .25s ease-in-out;-moz-transition: .25s ease-in-out;-ms-transition: .25s ease-in-out; -o-transition: .25s ease-in-out; transition: .25s ease-in-out;}
-@mixin cubic-transition{-webkit-transition: all 400ms cubic-bezier(0.595, 0.030, 0.000, 0.880); 
-   -moz-transition: all 400ms cubic-bezier(0.595, 0.030, 0.000, 0.880); 
-     -o-transition: all 400ms cubic-bezier(0.595, 0.030, 0.000, 0.880); 
+@mixin cubic-transition{-webkit-transition: all 400ms cubic-bezier(0.595, 0.030, 0.000, 0.880);
+   -moz-transition: all 400ms cubic-bezier(0.595, 0.030, 0.000, 0.880);
+     -o-transition: all 400ms cubic-bezier(0.595, 0.030, 0.000, 0.880);
         transition: all 400ms cubic-bezier(0.595, 0.030, 0.000, 0.880); /* custom */
 
--webkit-transition-timing-function: cubic-bezier(0.595, 0.030, 0.000, 0.880); 
-   -moz-transition-timing-function: cubic-bezier(0.595, 0.030, 0.000, 0.880); 
-     -o-transition-timing-function: cubic-bezier(0.595, 0.030, 0.000, 0.880); 
+-webkit-transition-timing-function: cubic-bezier(0.595, 0.030, 0.000, 0.880);
+   -moz-transition-timing-function: cubic-bezier(0.595, 0.030, 0.000, 0.880);
+     -o-transition-timing-function: cubic-bezier(0.595, 0.030, 0.000, 0.880);
         transition-timing-function: cubic-bezier(0.595, 0.030, 0.000, 0.880); /* custom */}
 
 
@@ -141,19 +141,19 @@ a{@include transition; color: #000;
             @if $i%3 == 1 {
                 $num: 0;
             }
-            
+
             &:nth-of-type(#{$i}) {
                 transform: translate((4px*2)*$num, (4px*2)*(floor(($i - 1)/3)))
             }
-            
+
             $num: $num + 1;
         }
     }
 
     &:hover {
-        .pix {            
+        .pix {
             background-color: $color-green;
-            
+
             &:nth-of-type(1) { transform: translate(-(4px), -(4px)); }
             &:nth-of-type(3) { transform: translate((4px*5), -(4px)); }
             &:nth-of-type(7) { transform: translate(-(4px), (4px*5)); }
@@ -172,7 +172,7 @@ a{@include transition; color: #000;
             &:nth-of-type(8) { transform: translate((4px*3), (4px*3)); }
             &:nth-of-type(9) { transform: translate((4px*4), (4px*4)); }
         }
-        
+
         &:hover {
             .pix {
                 &:nth-of-type(1) { transform: translate(-(4px), -(4px)); }
@@ -201,7 +201,7 @@ a{@include transition; color: #000;
 
 /* PAGINATION */
 .pagination{width: 100%; height: 40px; display: block; float: left; text-align: center; margin: 0;
-	li.page-item{ float: none; display: inline-block; 
+	li.page-item{ float: none; display: inline-block;
 		a.page-link{ height: 40px; line-height: 36px; border: 2px solid #000; float: left; border-radius: 0 !important; font-size: 12px; color: #000; font-weight: 600; padding: 0 20px;}}}
 
 
@@ -210,10 +210,10 @@ a{@include transition; color: #000;
 .preloader{width: 100%; height: 100%; position: fixed; left: 0; top: 0; z-index: 13; background: $color-green;  @include cubic-transition;
 	.inner{width: 100%; height: 100%; position: absolute; left: 0; top: 0;background: url(../images/preloader.gif) center no-repeat #000; background-size: 80px 80px; @include cubic-transition; }
 	.holder{width: 100%; height: 26px; position: absolute; left: 0; top: 50%; margin-top: 50px; text-align: center;}
-	.typewriter{  height: 26px; line-height: 26px; display: inline-block; color: #fff; 
+	.typewriter{  height: 26px; line-height: 26px; display: inline-block; color: #fff;
 		#typewriter-text{ float: left;  font-size: 12px; margin-left: 5px; margin-top: -2px; margin-right: 3px;}
 		#typewriter-suffix{width: 2px; height: 16px; display: inline-block; background: $color-green; text-indent: -1000px; overflow: hidden;}}
-	.loader { width: 100%; height: 3px; border: none; border-radius: none; position: absolute; top: 0; left: 0; 
+	.loader { width: 100%; height: 3px; border: none; border-radius: none; position: absolute; top: 0; left: 0;
 	&:after { content: ""; display: block; width: 100%; height: 100%; z-index: 3; position: absolute; top: 0; left: 0; }}
 	.trackbar { width: 100%; height: 100%; border-radius: 0; color: #fff; text-align: center; position: relative; background: #808080; opacity: 0.99; }
 	.loadbar { width: 0%; height: 100%; background:$color-green; box-shadow: 0px 0px 10px $color-green; position: absolute; top: 0; left: 0; z-index: 2; animation: flicker 5s infinite; overflow: hidden; }}
@@ -243,7 +243,7 @@ a{@include transition; color: #000;
 
 
 /* SANDWICH BUTTON */
-.sandwich-btn { width: 46px; height: 46px; float: right; position: relative; cursor: pointer; border-radius: 50%; 
+.sandwich-btn { width: 46px; height: 46px; float: right; position: relative; cursor: pointer; border-radius: 50%;
 span {display: block; height: 2px; width: 18px; background: #fff; opacity: 1; position: absolute; right: 8px; -webkit-transform: rotate(0deg); -moz-transform: rotate(0deg); -o-transform: rotate(0deg); transform: rotate(0deg); -webkit-transition: .25s ease-in-out; -moz-transition: .25s ease-in-out; -o-transition: .25s ease-in-out; transition: .25s ease-in-out;
 &:nth-child(1) {top: 12px; }
 &:nth-child(2) {  top: 20px; }}
@@ -260,14 +260,14 @@ span {display: block; height: 2px; width: 18px; background: #fff; opacity: 1; po
 	.green-layer{width: 100%; height: 100%; position: absolute; left: -100%; top: 0; z-index: 2; background: $color-green; @include cubic-transition;}
 	.inner{ color: #fff; position: relative; z-index: 4; text-align: center;  @include cubic-transition; opacity: 0; transform:scale(1.1);
 		ul{display: block; margin: 0; padding: 0;
-			li{display: block; margin: 0; padding: 0; position: relative; 
+			li{display: block; margin: 0; padding: 0; position: relative;
 				&:hover ul{opacity: 1; visibility: visible;}
 				ul{width: 100%; height: 100%; display: flex; flex-direction: row; position: absolute; left: 0; top: 0; background: rgba(0,0,0,0.95); text-align: center; flex-wrap: wrap; justify-content: center; align-items: center; opacity: 0; visibility: hidden; @include transition; transition-delay: 0s !important;
 					li{ margin: 0 20px; padding: 0; list-style: none; position: static;
 						a{float:left; font-size: 18px;
 							&:before{display: none;}
 							&:hover{color: $color-green;}}}}
-				a{font-size: 50px; font-weight: 800; color: #fff; position: relative; 
+				a{font-size: 50px; font-weight: 800; color: #fff; position: relative;
 					&:before{content: ""; width: 0; height: 10px; position: absolute; left: 0; bottom: 12px; background: $color-green; z-index: -1; @include transition;}
 					&:hover{text-decoration: none;
 						&:before{width: 100%;}}}}}
@@ -281,18 +281,18 @@ span {display: block; height: 2px; width: 18px; background: #fff; opacity: 1; po
 
 /* HEADER */
 .header{width: 100%; height: 100%; display: flex; flex-wrap:wrap; position: fixed; left: 0; top: 0; }
-	
 
 
-	
+
+
 /* SOCIAL MEDIA */
 .social-media{ width: 38px; position: absolute;  z-index: 7; right: 60px; top: 200px; text-align: center; margin: 0; padding: 0;
 	li{ width: 100%; float: left; display: block; padding: 0; list-style: none;
 		a{ width: 100%; float:left; color: #fff; font-size: 13px; margin: 10px 0;
 			&:hover{color:$color-green;}}}}
-	
 
-	
+
+
 /* SCROLL DOWN */
 .scroll-down{width: 1px; height: 90px; position: absolute; right: 63px; bottom: 30px; z-index:2;
 	b{ width: 100px; font-size: 10px; font-weight: 600; color: #fff; transform-origin: left; margin-left: -15px; margin-top: 0; transform: rotate(90deg); float: left; }
@@ -318,7 +318,7 @@ span {display: block; height: 2px; width: 18px; background: #fff; opacity: 1; po
 			&.active{color: #fff;}}}
 	.sandwich-nav{ margin-right: 0;
 		b{ font-size: 14px; line-height: 38px; color: #fff; font-weight: 400;  @include second-font;}
-		.circle{width: 38px; height: 38px; float: right; border: 2px solid rgba(255,255,255,0.2); border-radius: 50%; margin-left: 10px; position: relative; cursor: pointer; 
+		.circle{width: 38px; height: 38px; float: right; border: 2px solid rgba(255,255,255,0.2); border-radius: 50%; margin-left: 10px; position: relative; cursor: pointer;
 			&.open{border-color:#fff; background: #fff;
 				span{background: #000;}}}}}
 
@@ -328,13 +328,13 @@ span {display: block; height: 2px; width: 18px; background: #fff; opacity: 1; po
 .header{ margin: 0;
 	.slider{width: 100%; height: 100%; position: absolute; left: 0; top: 0; transform: scale(1.4); @include cubic-transition; transition-delay: 0.6s; opacity: 0;
 		&:after{content: ""; width: 100%; height: 100%; position:absolute; left: 0; top: 0; background: url(../images/lines.png); z-index: 1;}}
-	.gallery-top { width: 100%; height: 100%; position: absolute; left: 0; top: 0; z-index: 1; background: #000; 
+	.gallery-top { width: 100%; height: 100%; position: absolute; left: 0; top: 0; z-index: 1; background: #000;
 	.swiper-wrapper{opacity: 0.6;
 .slide-inner{width: 100%; height: 100%; position: absolute; left: 0; top: 0; z-index: 1; background-size: cover; background-position: center; display: flex; justify-content: center; align-items: center; }}}}
 
 
 
-.header .gallery-thumbs{ height: 60%; position: absolute; left: 60px;  top: 20%; z-index: 2; overflow: hidden; transform: translateX(-100px); opacity: 0; @include cubic-transition; transition-delay: 0.8s; 
+.header .gallery-thumbs{ height: 60%; position: absolute; left: 60px;  top: 20%; z-index: 2; overflow: hidden; transform: translateX(-100px); opacity: 0; @include cubic-transition; transition-delay: 0.8s;
 	.swiper-slide{width: 100%; display: flex; flex-direction: column; justify-content: center; font-size: 90px; color: #808080; font-weight: 700;
 		&.swiper-slide-active{color: #fff;
 			a{display: block;}}
@@ -357,7 +357,7 @@ span {display: block; height: 2px; width: 18px; background: #fff; opacity: 1; po
 	.inner{width: 100%;
 		.masker{ width: 100%; overflow: hidden; position: relative;
 			h1 { display: inline-block; margin-bottom: 15px; font-size: 12vw;  font-weight: 800; line-height: 1; color: #fff; position: relative;
-			&:before{content:attr(data-text); position:absolute; left:-2px; text-shadow:1px 0 blue; top:0; color:white; overflow:hidden; clip:rect(0,900px,0,0); 
+			&:before{content:attr(data-text); position:absolute; left:-2px; text-shadow:1px 0 blue; top:0; color:white; overflow:hidden; clip:rect(0,900px,0,0);
   animation:noise-anim-2 3s infinite linear alternate-reverse;}
 			&:after{content:attr(data-text); position:absolute; left:2px; text-shadow:-1px 0 red; top:0; color:white; overflow:hidden; clip:rect(0,xw00px,0,0);  animation:noise-anim 2s infinite linear alternate-reverse;}}}
 		h5{color: #fff; font-weight: 300; font-size: 20px; padding: 0 30%; line-height: 30px; margin-bottom: 40px;}
@@ -384,7 +384,7 @@ span {display: block; height: 2px; width: 18px; background: #fff; opacity: 1; po
 
 
 /* VIDEO HERO */
-.video-hero{width: 100%; height: 100%; display: flex; flex-wrap: wrap; flex-direction: column; justify-content: center; position: absolute; left: 0; top: 0; 
+.video-hero{width: 100%; height: 100%; display: flex; flex-wrap: wrap; flex-direction: column; justify-content: center; position: absolute; left: 0; top: 0;
 .inner{ display: inline-block; position: relative; z-index: 2; text-align: center;
 		h1{ font-size: 10vw; font-weight: 800; color: #fff;  -webkit-text-fill-color: transparent;   -webkit-text-stroke-width: 1px; -webkit-text-stroke-color: #fff; line-height: 1; margin-bottom: 20px; }
 	h5{ font-size: 20px; font-weight: 800; color: #fff; margin-bottom: 40px;}}
@@ -398,7 +398,7 @@ span {display: block; height: 2px; width: 18px; background: #fff; opacity: 1; po
 	&:after{content: ""; width: 100%; height: 100%; position:absolute; left: 0; top: 0; background: url(../images/lines.png); z-index: 1;}
 	.inner{width: 100%; padding: 0 60px; margin-top: 39px; position: relative; z-index: 3;
 		h2{font-size: 8em; font-weight: 800; line-height: 1; color: #fff; position: relative;
-			&:before{content:attr(data-text); position:absolute; left:-2px; text-shadow:1px 0 blue; top:0; color:white; overflow:hidden; clip:rect(0,900px,0,0); 
+			&:before{content:attr(data-text); position:absolute; left:-2px; text-shadow:1px 0 blue; top:0; color:white; overflow:hidden; clip:rect(0,900px,0,0);
   animation:noise-anim-2 3s infinite linear alternate-reverse;}
 			&:after{content:attr(data-text); position:absolute; left:2px; text-shadow:-1px 0 red; top:0; color:white; overflow:hidden; clip:rect(0,xw00px,0,0);  animation:noise-anim 2s infinite linear alternate-reverse;}}
 		p{font-size:26px; line-height: 40px; color: #fff; font-weight: 300; margin-bottom: 0; padding-right: 40%;}}}
@@ -444,7 +444,7 @@ span {display: block; height: 2px; width: 18px; background: #fff; opacity: 1; po
 
 
 /* WORKS FILTER */
-.filter-bar{width: 100%; float: left;  margin-bottom: 60px; 
+.filter-bar{width: 100%; float: left;  margin-bottom: 60px;
 	.works-filter{float: left; line-height: 20px; margin: 0; padding: 0;
 		li{float: left; margin: 0; margin-right: 10px; padding: 0; list-style: none; opacity: 0; transform: translateY(10px); @include transition;
 			&:nth-child(1){transition-delay: 0s;}
@@ -475,7 +475,7 @@ span {display: block; height: 2px; width: 18px; background: #fff; opacity: 1; po
 	p{color:#808080;
 		&:last-child{margin-bottom: 60px;}}
 	.case-navbar{ width: 100%; float: left; margin-bottom: 0; background: #fff; padding: 0; text-align: center; z-index: 2; position: -webkit-sticky; position: -moz-sticky; position: -ms-sticky; position: -o-sticky; position: sticky; top: 0;
-		ul{ width: 100%; float: left; padding: 30px 0; margin: 0; 
+		ul{ width: 100%; float: left; padding: 30px 0; margin: 0;
 			li{display: inline-block; margin: 0 30px; padding: 0; list-style: none;
 				a{ font-weight: 600;
 					&:hover{color: $color-green; text-decoration: none;}}}}}}
@@ -641,7 +641,7 @@ span {display: block; height: 2px; width: 18px; background: #fff; opacity: 1; po
 	img{height:55px; display: inline-block; margin-bottom: 20px;}
 	h2{font-size: 60px; font-weight: 700; margin-bottom: 30px;}
 	h5{@include second-font; text-transform: uppercase; margin-bottom: 50px; color: #808080;}
-	ul{display: inline-block; margin-bottom: 20px; padding: 0; 
+	ul{display: inline-block; margin-bottom: 20px; padding: 0;
 		li{float:left; margin: 0 10px; padding: 0; list-style: none;
 			a{font-size:12px; color: #fff;
 				&:hover{color:$color-green;}}}}
@@ -696,7 +696,7 @@ span {display: block; height: 2px; width: 18px; background: #fff; opacity: 1; po
 	.social-media{display: none;}
 	.scroll-down{display: none;}
 	.our-team{padding-top: 80px;}
-	.works{padding-top: 80px; padding-bottom: 0;} 
+	.works{padding-top: 80px; padding-bottom: 0;}
 	.works ul li{width: 100%; margin-top: 0 !important; margin-bottom: 80px; padding: 0 12%;}
 	.works ul li figure figcaption{padding-bottom: 30px;}
 	.works.two-cols ul li{width: 100%;}
