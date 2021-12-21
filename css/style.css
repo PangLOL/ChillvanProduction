@@ -1611,10 +1611,10 @@ a:hover {
   margin: 0;
 }
 .works ul li figure:hover .thumb {
-  box-shadow: 4px 21px 44px -13px rgba(0, 0, 0, 0.75);
+  box-shadow: 4px 21px 44px -13px rgba(0, 0, 0, 0.9);
 }
 .works ul li figure:hover figcaption {
-  text-shadow: 2px 10px 10px rgba(0, 0, 0, 0.35);
+  text-shadow: 2px 10px 10px rgba(0, 0, 0, 0.55);
 }
 .works ul li figure:hover figcaption a {
   opacity: 1;
@@ -1632,6 +1632,7 @@ a:hover {
   padding: 0 30px;
   padding-bottom: 50px;
   transform: translateZ(20px);
+  text-shadow: 2px 10px 10px rgba(0, 0, 0, 0.35);
 }
 .works ul li figure figcaption .brand {
   height: 30px;
